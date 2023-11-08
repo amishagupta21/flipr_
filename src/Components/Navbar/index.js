@@ -3,9 +3,10 @@ import styles from "./index.module.css";
 import logo from "../../assests/images/fliprLogo.PNG";
 
 const Navbar = ({ onFilter, prizes }) => {
-    const [filterText, setFilterText] = useState("");
     const [selectedCategory, setSelectedCategory] = useState("all");
     const [selectedYear, setSelectedYear] = useState("all");
+    const [filterText] = useState("");
+
 
     const handleFilterChange = () => {
         onFilter(filterText, selectedCategory, selectedYear);
